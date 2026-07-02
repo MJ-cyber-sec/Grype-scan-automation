@@ -19,14 +19,14 @@ During a real client engagement, multiple Docker image files needed to be scanne
 - openpyxl ('pip install openpyxl')
 
 ## Usage
-#Step 1 - Run Grype scan on all .tar files in target folder
-[command]
+# Step 1 - Run Grype scan on all .tar files in target folder
+./grype automate.sh /folder ##run the bash script on target folder
 
-#Step 2 - Verify JSON output files were created
+# Step 2 - Verify JSON output files were created
 ls -lh
 
-#Step 3 - Export JSON results to Excel
-[command]
+# Step 3 - Export JSON results to Excel
+python file.py --path result /path/to/store ##run the python file and create result folder at which path
 
 ## Output
 Each `.json` scan result is exported as an organised Excel file containing vulnerability findings including vulnerability ID, severity, description, affected package, package version, fix state, and references.
